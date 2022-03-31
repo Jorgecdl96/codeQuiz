@@ -309,8 +309,10 @@ function gameOver(){
 
 clearInterval(refreshIntervalID);
 
+setTimeout(function(){
 document.getElementById('quiz5').style.display = 'none';
 document.getElementById('gameover').style.display = 'block'
+}, 1500);
 
 var score = document.getElementById('score');
 
