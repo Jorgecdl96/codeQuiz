@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+        <div id="principal-page">
+        <h1>Coding Quiz Challenge</h1>
+        <p>Try to answer the following code-related questions within the time<br>
+        limit. Keep in mind that incorrect answers will penalize your scoretime<br>
+        by ten seconds!
+        </p>
+        <button id="startQuiz" class="button">Start Quiz</button>
+    
+        </div>
+
+        <div id="counter">Time: 0</div>
+
+        <section id="question-section">
+        <div id="quiz">
+            <h2 id="questions1"></h2>
+            <ol id="options">
+            
+            </ol>  
+        </div>
+        
+        <div id="quiz2">
+            <h2 id="questions2"></h2>
+            <ol id="options2">
+            
+            </ol>  
+        </div>
+        <div id="quiz3">
+            <h2 id="questions3"></h2>
+            <ol id="options3">
+            
+            </ol>  
+        </div>
+        <div id="quiz4">
+            <h2 id="questions4"></h2>
+            <ol id="options4">
+            
+            </ol>  
+        </div>
+        <div id="quiz5">
+            <h2 id="questions5"></h2>
+            <ol id="options5">
+            
+            </ol>  
+        </div>
+        <div id="question-result">
+            <p id="resultdisplayed"></p>
+        </div>
+        </section>
+        
+    <section id="results">
+        <section id="gameover">
+            <h2>All done</h2>
+
+            <p id="score"> </p>
+
+            <p>Enter initials: <input type="text" id="enterinitials"> <input type="Submit" id="initials" value="Submit"></p>
+
+        </section>
+        <section id="highscores">
+            <h2>Highscores</h2>
+            <ol id ="list-storaged">
+
+            </ol>
+
+            <p><button id="goback">Go Back</button><button id="clearscores">Clear Highscores</button></p>
+        </section>
+    </section>
+        <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
