@@ -62,20 +62,10 @@ var timeLeft = 75;
 var refreshIntervalID = 0;
 
 
-startQuiz.addEventListener('click', countDown);
-startQuiz.addEventListener('click', questionOne);
+    startQuiz.addEventListener('click', countDown);
+    startQuiz.addEventListener('click', questionOne);
 
-function quizCode(){
 
-    document.getElementById('highscores').style.display = 'none';
-
-    var principalPage = document.getElementById('principal-page');
-
-    principalPage.style.display = 'block';
-
-    
-
-}
 
 
 function countDown(event) {
@@ -368,8 +358,6 @@ function saveToLocalStorage (){
 }
 
 function getBack(){
-    quizCode();
+    location.reload();
 }
-
-
 
