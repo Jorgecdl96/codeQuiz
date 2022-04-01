@@ -24,7 +24,7 @@ body{
 #principal-page{
     display: block;
 }
-
+/*style for questions*/
 #quiz,#quiz2,#quiz3,#quiz4,#quiz5{
     display: flex;
     flex-direction: column;
@@ -36,7 +36,7 @@ body{
     display: flex;
     flex-direction: column;
 }
-
+/*buttons style*/
 button{
     background-color: blueviolet;
     color: white;
@@ -49,6 +49,8 @@ button:hover{
     opacity: 0.7;
     cursor: pointer;
 }
+
+/*styling correct and wrong box*/
 #question-result{
     display: none;
    text-align: start;
