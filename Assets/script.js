@@ -68,6 +68,7 @@ var refreshIntervalID = 0;
 
 
 
+  // Quiz timer  
 function countDown(event) {
     event.preventDefault();
 
@@ -89,11 +90,11 @@ function countDown(event) {
 }
 
 
-
 function questionOne() {
     var questions = document.getElementById('questions1');
         questions.innerHTML = quiz[0].question;
 
+        // create a button and assign a class to every option of my object 1 inside an array
         for (var i = 0; i < quiz[0].options.length; i++) {
             var multipleChoices = document.getElementById('options');
             var button = document.createElement('button');
@@ -129,7 +130,7 @@ function questionTwo() {
     var questions2 = document.getElementById('questions2');
     document.getElementById('quiz').style.display = 'none';
     questions2.innerHTML = quiz[1].question;
-
+    // create a button and assign a class to every option of my object 2 inside an array
     for (var i = 0; i < quiz[1].options.length; i++) {
         var multipleChoices2 = document.getElementById('options2');
         var button2 = document.createElement('button');
@@ -167,7 +168,7 @@ function questionThree() {
     var questions3 = document.getElementById('questions3');
     document.getElementById('quiz2').style.display = 'none';
     questions3.innerHTML = quiz[2].question;
-
+    // create a button and assign a class to every option of my object 3 inside an array
     for (var i = 0; i < quiz[2].options.length; i++) {
         var multipleChoices = document.getElementById('options3');
         var button = document.createElement('button');
@@ -204,7 +205,7 @@ function questionFour() {
     var questions4 = document.getElementById('questions4');
     document.getElementById('quiz3').style.display = 'none';
     questions4.innerHTML = quiz[3].question;
-
+    // create a button and assign a class to every option of my object 4 inside an array
     for (var i = 0; i < quiz[3].options.length; i++) {
         var multipleChoices = document.getElementById('options4');
         var button = document.createElement('button');
@@ -236,12 +237,12 @@ function questionFour() {
 
 }
 
-var questions5 = document.getElementById('questions5');
 
 function questionFive() {
+    var questions5 = document.getElementById('questions5');
     document.getElementById('quiz4').style.display = 'none';
     questions5.innerHTML = quiz[4].question;
-
+    // create a button and assign a class to every option of my object 5 inside an array
     for (var i = 0; i < quiz[4].options.length; i++) {
         var multipleChoices = document.getElementById('options5');
         var button = document.createElement('button');
@@ -331,6 +332,7 @@ function saveToLocalStorage (){
     document.getElementById('gameover').style.display = 'none';
     document.getElementById('highscores').style.display = 'block';
 
+    //store user initials and score.
     var enterInitials = document.getElementById('enterinitials');
     localStorage.setItem('initials', enterInitials.value + ' - ' + timeLeft);
     
@@ -344,12 +346,14 @@ function saveToLocalStorage (){
 
    listDisplayed.innerHTML = initialStoraged;
 
+    //Go back button
    var goBack = document.getElementById('goback');
 
     goBack.addEventListener('click', getBack);
 
     var clearScore = document.getElementById('clearscores');
 
+    //clearing scores submitted
     clearScore.addEventListener('click', function (){
     
         localStorage.clear();
@@ -359,6 +363,7 @@ function saveToLocalStorage (){
 
 }
 
+// Display the game again
 function getBack(){
     location.reload();
 }
