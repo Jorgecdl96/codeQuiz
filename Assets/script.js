@@ -82,9 +82,9 @@ function countDown(event) {
             counter.innerHTML = 'Time: ' + timeLeft;
         } else {
             location.reload();
-            for(var i = 0; i < 1; i++){
-                alert('Your time has expired');
-            }
+
+            alert('Your time has expired');
+            
         }
     }, 1000);
 }
@@ -334,9 +334,11 @@ function saveToLocalStorage (){
 
     //store user initials and score.
     var enterInitials = document.getElementById('enterinitials');
-    localStorage.setItem('initials', enterInitials.value + ' - ' + timeLeft);
+    enterInitials = enterInitials.value + ' - ' + timeLeft;
+
+    localStorage.setItem('initials', enterInitials );
     
-   var listStoraged = document.getElementById('list-storaged');
+    var listStoraged = document.getElementById('list-storaged');
 
    var listDisplayed = document.createElement('li');
 
