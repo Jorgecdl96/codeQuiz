@@ -81,10 +81,10 @@ function countDown(event) {
             timeLeft--;
             counter.innerHTML = 'Time: ' + timeLeft;
         } else {
-            document.getElementById('principal-page').style.display = 'block';
-            document.getElementById('question-section').style.display = 'none';
-            document.getElementById('results').style.display = 'none';
-            document.getElementById('highscores').style.display = 'none';
+            location.reload();
+            for(var i = 0; i < 1; i++){
+                alert('Your time has expired');
+            }
         }
     }, 1000);
 }
